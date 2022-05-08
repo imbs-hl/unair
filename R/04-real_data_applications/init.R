@@ -1,0 +1,5 @@
+source("../init-global.R", chdir = TRUE)
+source(file.path(functions_dir, "pvalue.R"))
+source(file.path(functions_dir, "airc_pvalue.R"))
+source(file.path(functions_dir, "real_data_functions.R"))
+working_dir <- file.path(main_dir, "04-real_data_applications")

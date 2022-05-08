@@ -1,0 +1,6 @@
+source("../init-global.R", chdir = TRUE)
+source(file.path(functions_dir, "pvalue.R"))
+source(file.path(functions_dir, "airc_pvalue.R"))
+source(file.path(functions_dir, "simulate_effect.R"))
+source(file.path(functions_dir, "compare_dist_null.R"))
+working_dir <- file.path(main_dir, "03-dist_alternativ_case")

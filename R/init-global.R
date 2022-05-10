@@ -1,3 +1,8 @@
+## Install the pranger package develop computation of random forest
+## proximity measure using the ranger package.
+if(!any(rownames(installed.packages()) == "pranger")){
+  devtools::install_github("imbs-hl/pranger")
+}
 ## ================================
 ## Load necessary packages
 ## ================================

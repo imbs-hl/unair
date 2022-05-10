@@ -1,5 +1,5 @@
 # unair
-Here we describe how to run the R code. The R code is intended to be parallelized using the R package \texttt{batchtools}.
+Here we describe how to run the R code. The R code is intended to be parallelized using the R package `batchtools`.
 
 The "init-global.R" file contains initializations required for all other files. Please use it to set the path to the local main directory. If you want to use a cluster for parallel computation, please set up the remote main directory. Also configure further required batchtools' resources. You can optionally use the file "batchtools.conf.R" for configurations. Specify partition (or queue) and account on your cluster with the corresponding variables in "init-global.R".
 

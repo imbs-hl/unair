@@ -29,14 +29,13 @@ pacman::p_load(
 user <- Sys.info()[["user"]]
 main_dir <- "/imbs/home/cesaire/projects/urf_mtry_paper/R-code"
 ## Image directory
-img_dir <- "~/projects/urf_mtry_paper/Fouodo_Szymczak_Wright_Koenig/img"
+img_dir <- file.path(dirname(main_dir))
 if(!dir.exists(img_dir)){
   dir.create(img_dir) 
 }
 
 ## Registry directory to be used by batchtools, located on the cluster
-registry_dir <- file.path("/imbs/home/cesaire/projects/urf_mtry_paper/R-code",
-                          "registry")
+registry_dir <- file.path(main_dir, "registry")
 if(!dir.exists(registry_dir)){
   dir.create(registry_dir) 
 }

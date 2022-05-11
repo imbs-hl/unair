@@ -1,11 +1,13 @@
 # unair
 Here we describe how to run the R code. The R code is intended to be parallelized using the R package [`batchtools`](https://github.com/mllg/batchtools).
 
-The `init-global.R` file contains initializations required for all other files. Please use it to set the path to the local main directory. If you want to use a cluster for parallel computation, please set up the remote main directory. Also configure further required `batchtools`' resources. You can optionally use the file `batchtools.conf.R` for configurations. `batchtools` ' template files could be found [here](https://github.com/mllg/batchtools/tree/master/inst/templates). Specify partition (or queue) and account on your cluster with the corresponding variables in `init-global.R`.
+The `init-global.R` file contains initializations required for all other files. Please use it to set the path to the local main directory. Please firstly set your main directory before running the R code.
 
-All results presented in the article can be reproduced by running the codes in each directory in the order of the numbers prefixing their names. To run the codes contained in a specific directory, please set this to your current directory, and firstly run the `init.R` file. The other `R` files contained in each directory are numbered in the order the should have to be executed. 
+Also configure further required `batchtools`' resources in the head of the `start_jobs.R` file. You can optionally use our configuration file `batchtools.conf.R` and adjust it to your specifications or use the one of the `batchtools` ' template, that available [here](https://github.com/mllg/batchtools/tree/master/inst/templates). Specify partition (or queue) and the account to be used on your cluster with the corresponding variables in `start_jobs.R`.
 
-Data are downloaded and saved into directory `data`. Especially for the data set `geneExp`, please unzip the downloaded file once the download is done. The first run is expected to throw an error because the downloaded file is not yet unzipped.
+All results presented in the article can be reproduced by running the codes in each directory following the order of the numbers prefixing their names.
+
+Data will be downloaded and saved into directory `data`.
 
 To reproduce all results:
 

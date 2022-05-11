@@ -12,6 +12,7 @@ pacman::p_load(
   ggplot2,
   tikzDevice,
   batchtools,
+  data.tree,
   ## For heatmap
   golubEsets,
   ComplexHeatmap,
@@ -45,10 +46,6 @@ if(!dir.exists(registry_dir)){
 
 ## Batchtools configuration file
 config_file <- file.path(main_dir, "99_batchtools/batchtools.conf.R")
-
-## For resource manager, e.g. SLURM
-partition <- "prio"
-account <- "dzhkomics"
 
 ## ===============================
 ##      Set data directories

@@ -1,4 +1,5 @@
 ## Make sure your current directory is 01-preprocessing
+working_dir <- file.path(main_dir, "01-preprocessing")
 source("init.R", chdir = TRUE)
 if(!file.exists(breast_cancer_file)){
   download.file(

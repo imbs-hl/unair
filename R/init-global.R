@@ -61,12 +61,19 @@ if(!dir.exists(data_dir)){
   dir.create(data_dir) 
 }
 breast_cancer_dir <- file.path(data_dir, "breast_cancer_coimbra_data_set")
+dir.create(path = breast_cancer_dir, showWarnings = FALSE)
 cervical_dir <- file.path(data_dir, "cervical_cancer")
+dir.create(cervical_dir, showWarnings = FALSE)
 gene_expression_dir <- file.path(data_dir, "gene_expression_cancer_rna")
+dir.create(gene_expression_dir, showWarnings = FALSE)
 heart_failure_clinical_dir <- file.path(data_dir, "heart_failure_clinical")
+dir.create(heart_failure_clinical_dir, showWarnings = FALSE)
 mice_protein_expression_dir <- file.path(data_dir, "mice_protein_expression")
+dir.create(mice_protein_expression_dir, showWarnings = FALSE)
 wine_dir <- file.path(data_dir, "wine")
+dir.create(wine_dir, showWarnings = FALSE)
 golub_dir <- file.path(data_dir, "gene_expr_golub")
+dir.create(golub_dir, showWarnings = FALSE)
 
 ## ========================
 ## Files 

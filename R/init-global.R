@@ -8,7 +8,6 @@ if(!any(rownames(installed.packages()) == "pranger")){
 ## ================================
 ##
 pacman::p_load(
-  pranger,
   data.table,
   ggplot2,
   tikzDevice,
@@ -28,15 +27,12 @@ pacman::p_load(
 ## Set your main directory using your user name here. Should be the path
 ## to "R-code"
 user <- Sys.info()[["user"]]
-main_dir <- if(user == "fouodo"){
-  ## On my local computer
-  "/Users/fouodo/projects/urf_mtry_paper/R-code"
-} else {
-  ## On our cluster, for parallelized works
-  "/imbs/home/cesaire/projects/urf_mtry_paper/R-code" 
-}
+main_dir <- "/imbs/home/cesaire/projects/urf_mtry_paper/R-code"
 ## Image directory
 img_dir <- "~/projects/urf_mtry_paper/Fouodo_Szymczak_Wright_Koenig/img"
+if(!dir.exists(img_dir)){
+  dir.create(img_dir) 
+}
 
 ## Registry directory to be used by batchtools, located on the cluster
 registry_dir <- file.path("/imbs/home/cesaire/projects/urf_mtry_paper/R-code",
@@ -63,6 +59,9 @@ account <- "dzhkomics"
 functions_dir <- file.path(main_dir, "functions")
 source(file.path(functions_dir, "batchtoolswrapper.R"))
 data_dir <- file.path(main_dir, "data")
+if(!dir.exists(data_dir)){
+  dir.create(data_dir) 
+}
 breast_cancer_dir <- file.path(data_dir, "breast_cancer_coimbra_data_set")
 cervical_dir <- file.path(data_dir, "cervical_cancer")
 gene_expression_dir <- file.path(data_dir, "gene_expression_cancer_rna")

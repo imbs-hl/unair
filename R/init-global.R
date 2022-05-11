@@ -26,7 +26,6 @@ pacman::p_load(
 ##
 ## Set your main directory using your user name here. Should be the path
 ## to "R-code"
-user <- Sys.info()[["user"]]
 main_dir <- "/imbs/home/cesaire/projects/urf_mtry_paper/R-code"
 ## Image directory
 img_dir <- file.path(dirname(main_dir))

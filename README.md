@@ -11,4 +11,6 @@ To reproduce all results:
 
 1. Configure the `init-global.R`
 2. Start the jobs using the `start_jobs.R` file
+Make sure all jobs completely run
+
 3. Resume all results using the `resume_results.R` file

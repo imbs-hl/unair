@@ -40,13 +40,6 @@ if(!dir.exists(registry_dir)){
   dir.create(registry_dir) 
 }
 
-## ===========================================
-##     Configuration of batchtools resources
-## ===========================================
-
-## Batchtools configuration file
-config_file <- file.path(main_dir, "99_batchtools/batchtools.conf.R")
-
 ## ===============================
 ##      Set data directories
 ## ===============================

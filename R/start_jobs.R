@@ -23,6 +23,7 @@ source("03-gene_exp_rna.R", chdir = TRUE)
 source("05-heart_failure.R", chdir = TRUE)
 source("06-mice-protein.R", chdir = TRUE)
 source("07-wine.R", chdir = TRUE)
+source("08-golub.R", chdir = TRUE)
 
 ## Compute null case distribution of importance estimates
 working_dir <- file.path(main_dir, "02-dist_null_case")
